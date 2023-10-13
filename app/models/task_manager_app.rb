@@ -1,0 +1,3 @@
+class TaskManagerApp < ApplicationRecord
+    
+end

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: MyString
+  description: MyText
+  catergory: 
+  due: 2023-10-11
+  created: 2023-10-11
+  completed: false
+
+two:
+  task: MyString
+  description: MyText
+  catergory: 
+  due: 2023-10-11
+  created: 2023-10-11
+  completed: false

@@ -1,0 +1,47 @@
+<%= form_with(model: task_manager_app) do |form| %>
+  <% if task_manager_app.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(task_manager_app.errors.count, "error") %> prohibited this task_manager_app from being saved:</h2>
+
+      <ul>
+        <% task_manager_app.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :task, style: "display: block" %>
+    <%= form.text_field :task %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :catergory, style: "display: block" %>
+    <%= form.select :catergory, ['Business', 'Personal']%>
+  </div>
+
+  <div>
+    <%= form.label :due, style: "display: block" %>
+    <%= form.date_field :due %>
+  </div>
+
+  <div>
+    <%= form.label :created, style: "display: block" %>
+    <%= form.date_field :created %>
+  </div>
+
+  <div>
+    <%= form.label :completed, style: "display: block" %>
+    <%= form.check_box :completed, {},"Complete", "Not Complete" %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
