@@ -5,7 +5,7 @@ class CreateTaskManagerApps < ActiveRecord::Migration[7.0]
       t.text :description
       t.binary :catergory
       t.date :due
-      t.date :created
+      t.date :created, default: -> { 'CURRENT DATE' }
       t.binary :completed
 
       t.timestamps

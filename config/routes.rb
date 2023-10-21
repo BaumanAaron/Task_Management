@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 root 'application#hello'
   # Defines the root path route ("/")
   # root "articles#index"
+  get '/tasks_within_date_range', to: 'task_manager_apps#tasks_within_date_range', as: 'tasks_within_date_range'
 end

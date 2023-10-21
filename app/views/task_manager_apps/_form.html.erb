@@ -32,16 +32,11 @@
   </div>
 
   <div>
-    <%= form.label :created, style: "display: block" %>
-    <%= form.date_field :created %>
-  </div>
-
-  <div>
     <%= form.label :completed, style: "display: block" %>
     <%= form.check_box :completed, {},"Complete", "Not Complete" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit value='Submit' %>
   </div>
 <% end %>

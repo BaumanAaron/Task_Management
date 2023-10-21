@@ -1,0 +1,18 @@
+<!-- app/views/task_manager_apps/tasks_within_date_range.html.erb -->
+
+<h1>Tasks Within Date Range</h1>
+
+<%= form_tag tasks_within_date_range_path, method: :get do %>
+  <%= label_tag 'start_date', 'Start Date:' %>
+  <%= date_field_tag 'start_date', params[:start_date] %>
+
+  <%= label_tag 'end_date', 'End Date:' %>
+  <%= date_field_tag 'end_date', params[:end_date] %>
+
+  <%= submit_tag 'Filter' %>
+<% end %>
+
+<% @tasks_within_date_range.each do |task_manager_app| %>
+  <!-- Display task details as needed -->
+  <p><%= task_manager_app.task %></p>
+<% end %>
