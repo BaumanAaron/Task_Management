@@ -39,5 +39,6 @@ th, td {
 <%= link_to "Edit", edit_task_manager_app_path(@task_manager_app) %> |
 <%= link_to "Back to List", task_manager_apps_path %>
 
+
 <%= button_to "Delete", @task_manager_app, method: :delete, data: { confirm: "Are you sure you want to delete task?" } %>
 

@@ -32,6 +32,12 @@
   </div>
 
   <div>
+    <%= form.label :created_at, style: "display: block" %>
+    <%= form.date_field :created_at, value: Time.now.strftime('%Y-%m-%d') %>
+  </div>
+
+
+  <div>
     <%= form.label :completed, style: "display: block" %>
     <%= form.check_box :completed, {},"Complete", "Not Complete" %>
   </div>

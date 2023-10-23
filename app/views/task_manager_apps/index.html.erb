@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Task List</h1>
+
 <!DOCTYPE html>
 <html>
 <style>
@@ -22,6 +22,7 @@ th, td {
 </style>
 <body>
 <table>
+  <caption><h1>Task List</h1></caption>
 <thead>
   <tr>
     <th>Task <%= link_to "sort", task_manager_apps_path(sort: 'task', direction: params[:direction] == 'asc' ? 'desc' : 'asc'), class: "btn btn-default" %></th>
@@ -31,7 +32,7 @@ th, td {
      <th>Completed <%= link_to "sort", task_manager_apps_path(sort: 'completed', direction: params[:direction] == 'asc' ? 'desc' : 'asc'), class: "btn btn-default" %></th>
      <th>Edit</th>
      <th>Delete</th>
-     
+
   </tr>
 </thead>
 
@@ -56,5 +57,5 @@ th, td {
 
 </tbody>
 </table>
-<%= link_to "Select date range", tasks_within_date_range_path %>
-<%= link_to "Create New Task", new_task_manager_app_path %>
+<%= link_to "Query", tasks_within_date_range_path %>
+<%= link_to "NEW", new_task_manager_app_path %>
