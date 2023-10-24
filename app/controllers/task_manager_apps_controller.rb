@@ -31,9 +31,11 @@ class TaskManagerAppsController < ApplicationController
       start_date = start_date.to_date.beginning_of_day
       end_date = end_date.to_date.end_of_day
 
-      @tasks_within_date_range = TaskManagerApp.where(due: start_date..end_date)
+      @tasks_within_date_range = TaskManagerApp.where(due: start_date..end_date).order(completed: :desc, due: :asc)
+
     else
-      @tasks_within_date_range = TaskManagerApp.all
+      @tasks_within_date_range = TaskManagerApp.all.order(completed: :desc, due: :asc)
+
     end
 
     render 'tasks_within_date_range'
